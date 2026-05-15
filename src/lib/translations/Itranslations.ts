@@ -1,3 +1,5 @@
+export type ServiceDelivery = 'fast' | 'medium' | 'extended';
+
 export interface Itranslations {
 	meta: {
 		title: string;
@@ -23,7 +25,19 @@ export interface Itranslations {
 		};
 		services: {
 			sectionTitle: string;
-			items: { title: string; body: string }[];
+			sectionIntro: string;
+			/** Shown after service cards: examples are illustrative, not fixed quotes. */
+			disclaimer: string;
+			deliveryLabels: Record<ServiceDelivery, string>;
+			items: {
+				title: string;
+				summary: string;
+				stack: string[];
+				delivery: ServiceDelivery;
+				highlights: string[];
+				notFit: string;
+				body: string;
+			}[];
 		};
 	};
 	projects: {
