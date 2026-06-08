@@ -37,6 +37,7 @@ export const englishTranslations: Itranslations = {
 			},
 			items: [
 				{
+					icon: 'layout',
 					title: 'Static SvelteKit sites with custom UI',
 					summary:
 						'Fast, polished frontends with a design system — ideal when you need a site or lightweight app without a heavy backend.',
@@ -51,6 +52,7 @@ export const englishTranslations: Itranslations = {
 					body: 'You get a tailored UI (including shadcn-style patterns where it fits), sensible routing, and a deployment story that keeps operations simple.'
 				},
 				{
+					icon: 'layers',
 					title: 'Full-stack TanStack Start or Next.js',
 					summary:
 						'CRUD-heavy apps, dashboards, and SEO-friendly products with server data, APIs, and a modern React ecosystem.',
@@ -65,6 +67,7 @@ export const englishTranslations: Itranslations = {
 					body: 'Engagements include API integration, sensible state management, and production build pipelines. Hosting model (Node vs serverless) is scoped early so estimates stay honest.'
 				},
 				{
+					icon: 'server',
 					title: 'ASP.NET Core API with database integration',
 					summary:
 						'Robust REST (or minimal) APIs with persistence, migrations, and documentation — great when .NET is already part of your stack.',
@@ -79,6 +82,7 @@ export const englishTranslations: Itranslations = {
 					body: 'Delivery focuses on maintainable APIs you can extend: clear boundaries, tests where they add value, and handover docs for your team.'
 				},
 				{
+					icon: 'container',
 					title: 'Full stack: ASP.NET Core API + modern frontend + Docker Compose',
 					summary:
 						'End-to-end systems with a .NET API, a TanStack Start / Next.js / SvelteKit client, optional Redis caching, and reproducible local and CI environments.',

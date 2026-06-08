@@ -37,6 +37,7 @@ export const norwegianTranslations: Itranslations = {
 			},
 			items: [
 				{
+					icon: 'layout',
 					title: 'Statiske SvelteKit-sider med skreddersydd UI',
 					summary:
 						'Raskt og polert grensesnitt med designsystem — når du trenger nettside eller lett app uten tung backend.',
@@ -51,6 +52,7 @@ export const norwegianTranslations: Itranslations = {
 					body: 'Du får skreddersydd UI (inkl. shadcn-lignende mønstre der det passer), fornuftig ruting og et deploy-oppsett som holder drift enkel.'
 				},
 				{
+					icon: 'layers',
 					title: 'Fullstack TanStack Start eller Next.js',
 					summary:
 						'CRUD-tunge apper, dashbord og SEO-vennlige produkter med serverdata, API-er og moderne React-økosystem.',
@@ -65,6 +67,7 @@ export const norwegianTranslations: Itranslations = {
 					body: 'Leveransen inkluderer API-integrasjon, fornuftig tilstandshåndtering og produksjonsbygg. Vertsmodell avklares tidlig slik at estimater holder.'
 				},
 				{
+					icon: 'server',
 					title: 'ASP.NET Core API med databaseintegrasjon',
 					summary:
 						'Robuste REST- (eller minimal-) API-er med persistens, migrasjoner og dokumentasjon — når .NET allerede er del av stacken.',
@@ -79,6 +82,7 @@ export const norwegianTranslations: Itranslations = {
 					body: 'Fokus på vedlikeholdbare API-er: tydelige grenser, tester der de gir verdi, og overleveringsdokumentasjon for teamet ditt.'
 				},
 				{
+					icon: 'container',
 					title: 'Full stack: ASP.NET Core API + moderne frontend + Docker Compose',
 					summary:
 						'Helhetlige systemer med .NET-API, TanStack Start / Next.js / SvelteKit-klient, valgfri Redis-cache og reproduserbare miljøer lokalt og i CI.',

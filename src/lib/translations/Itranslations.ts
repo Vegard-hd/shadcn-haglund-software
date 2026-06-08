@@ -1,3 +1,5 @@
+import type { ServiceIconKey } from '$lib/icons/tech-icons';
+
 export type ServiceDelivery = 'fast' | 'medium' | 'extended';
 
 export interface Itranslations {
@@ -30,6 +32,7 @@ export interface Itranslations {
 			disclaimer: string;
 			deliveryLabels: Record<ServiceDelivery, string>;
 			items: {
+				icon: ServiceIconKey;
 				title: string;
 				summary: string;
 				stack: string[];
