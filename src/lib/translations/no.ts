@@ -16,7 +16,8 @@ export const norwegianTranslations: Itranslations = {
 			headline: '[Ditt navn eller slagord her]',
 			tagline:
 				'[En kort beskrivelse av hva du gjør — for eksempel "Uavhengig programvareutvikler basert i Norge"]',
-			cta: 'Se prosjekter'
+			cta: 'Se prosjekter',
+			servicesBelow: 'Se tjenestene mine nedenfor'
 		},
 		about: {
 			sectionTitle: 'Om meg',
@@ -27,65 +28,67 @@ export const norwegianTranslations: Itranslations = {
 		services: {
 			sectionTitle: 'Tjenester',
 			sectionIntro:
-				'Fra statiske markedsføringssider til fullstack-produkter og .NET-API-er — velg nivå som passer tidslinje og teknologi. Basert i Norge; remote er greit.',
+				'Eksempler på hvordan jeg kan bidra som backend- og fullstackutvikler. Dette er ikke faste pakker — jeg finner riktig kombinasjon av API, database, frontend, hosting og leveranse rundt prosjektet ditt.',
 			disclaimer:
-				'Oppsettene over er eksempler til illustrasjon og markedsføring — ikke faste pakker eller forpliktelser. Ta kontakt for riktig omfang, pris og leveransetid tilpasset prosjektet ditt.',
+				'Disse eksemplene er startpunkter for å finne riktig omfang, ikke faste pakker eller garantier. Endelig løsning, pris og tidslinje avhenger av produktet, integrasjoner, eksisterende kodebase og leveranseforventninger.',
+			contactHook: 'Vil du snakke om omfang, tidslinje eller teknologi for prosjektet ditt?',
+			contactCta: 'Ta kontakt',
 			deliveryLabels: {
-				fast: 'Rask leveranse',
-				medium: 'Middels leveranse',
-				extended: 'Utvidet leveranse'
+				fast: 'Mindre omfang',
+				medium: 'Produktbygg',
+				extended: 'Større system'
 			},
 			items: [
 				{
 					icon: 'layout',
-					title: 'Statiske SvelteKit-sider med skreddersydd UI',
+					title: 'SvelteKit-sider og lette apper',
 					summary:
-						'Raskt og polert grensesnitt med designsystem — når du trenger nettside eller lett app uten tung backend.',
+						'Polerte frontender for markedsføringssider, landingssider, dashbord og lette apper der tung backend ikke er nødvendig.',
 					stack: ['SvelteKit', 'TypeScript', 'shadcn-svelte', 'Tailwind CSS', 'Statisk hosting'],
 					delivery: 'fast',
 					highlights: [
-						'Markedsføringssider, landingssider og innholdsledede opplevelser',
-						'Tilgjengelige, responsive layouter med konsistent komponentbibliotek',
-						'Ytelsesoptimaliserte statiske bygg du kan hoste nesten hvor som helst'
+						'Responsive sider og app-skall med tydelig visuelt system',
+						'Tilgjengelig UI bygget med SvelteKit, Tailwind og shadcn-lignende komponenter',
+						'Statisk eller enkel deploy når serverkompleksitet ikke trengs'
 					],
-					notFit: 'Mindre egnet ved tung autentisering, sanntidssamarbeid eller komplekse serverflyter — da løfter vi ofte til neste nivå.',
-					body: 'Du får skreddersydd UI (inkl. shadcn-lignende mønstre der det passer), fornuftig ruting og et deploy-oppsett som holder drift enkel.'
+					notFit: 'Passer best når hovedverdien ligger i presentasjon, brukervennlighet og fart. Hvis produktet trenger komplekse dataflyter, autentisering eller integrasjoner, kan jeg scope en mer komplett app.',
+					body: 'Dette kan passe godt for en første offentlig nettside, en tydelig produktflate eller et internt verktøy som trenger god frontend uten unødvendig backend.'
 				},
 				{
 					icon: 'layers',
-					title: 'Fullstack TanStack Start eller Next.js',
+					title: 'Frontend-apper med React, Next.js, TanStack eller SvelteKit',
 					summary:
-						'CRUD-tunge apper, dashbord og SEO-vennlige produkter med serverdata, API-er og moderne React-økosystem.',
+						'Applikasjonsfrontender for produkter, dashbord og internverktøy som trenger skjemaer, datalasting, auth-vennlige flyter og API-integrasjon.',
 					stack: ['TanStack Start eller Next.js', 'TypeScript', 'React', 'Server components / loaders', 'Ønsket vert'],
 					delivery: 'medium',
 					highlights: [
-						'Bruker- og internverktøy med skjemaer, tabeller og auth-vennlige mønstre',
-						'Tyddige data- og ruter-modeller (App Router eller TanStack-konvensjoner)',
-						'Kan deployes til Node, serverless eller hybrid — avklares tidlig'
+						'React, Next.js, TanStack Start eller SvelteKit ut fra prosjektets behov',
+						'Skjemaer, tabeller, dashbord og brukerflyter koblet mot ekte API-er',
+						'Data- og rutemønstre valgt for vedlikeholdbarhet og hostingmodell'
 					],
-					notFit: 'Trenger du langvarig .NET-landskap eller integrasjonsførst API-er, se ASP.NET Core-alternativene under.',
-					body: 'Leveransen inkluderer API-integrasjon, fornuftig tilstandshåndtering og produksjonsbygg. Vertsmodell avklares tidlig slik at estimater holder.'
+					notFit: 'Passer best når frontenden er produktflaten og backend allerede finnes, er enkel, eller kan scopes separat. Hvis API og database er kjernen, kan jeg ta ansvar for det også.',
+					body: 'Jeg kan hjelpe med å gjøre produktkrav om til brukbare frontend-flyter, integrere backend-tjenester og sette opp bygg og deploy slik at appen kan videreutvikles.'
 				},
 				{
 					icon: 'server',
-					title: 'ASP.NET Core API med databaseintegrasjon',
+					title: 'ASP.NET Core-API-er med SQL-integrasjon',
 					summary:
-						'Robuste REST- (eller minimal-) API-er med persistens, migrasjoner og dokumentasjon — når .NET allerede er del av stacken.',
+						'Backend-API-er med databasedesign, persistens, migrasjoner, validering og OpenAPI-dokumentasjon for produkter som trenger et solid servergrunnlag.',
 					stack: ['ASP.NET Core', 'C#', 'EF Core eller Dapper', 'PostgreSQL / SQL Server', 'OpenAPI'],
 					delivery: 'medium',
 					highlights: [
-						'Domenedrevne endepunkter, validering og versjonering ved behov',
-						'Migrasjoner, seeding og miljøbevisst konfigurasjon',
-						'Valgfri kobling mot SvelteKit- eller React-frontend over'
+						'REST- eller minimal API-er med tydelige grenser for endepunkter og validering',
+						'SQL-integrasjon med PostgreSQL eller SQL Server via EF Core eller Dapper',
+						'Migrasjoner, OpenAPI-dokumentasjon og miljøbevisst konfigurasjon'
 					],
-					notFit: 'Ikke førstevalg for ren brosjyre-side uten backend — da holder ofte statisk SvelteKit-nivå.',
-					body: 'Fokus på vedlikeholdbare API-er: tydelige grenser, tester der de gir verdi, og overleveringsdokumentasjon for teamet ditt.'
+					notFit: 'Passer best når backend-kvalitet, datamodellering og integrasjonssikkerhet er viktig. For en enkel brosjyreside er en lettere frontend-scope ofte nok.',
+					body: 'Dette er ofte riktig form når du trenger et ryddig API for frontend, mobilapp, adminverktøy eller integrasjonspunkt, og vil at backenden skal være forståelig etter overlevering.'
 				},
 				{
 					icon: 'container',
-					title: 'Full stack: ASP.NET Core API + moderne frontend + Docker Compose',
+					title: 'Fullstack produktbygg med API, frontend og infrastruktur',
 					summary:
-						'Helhetlige systemer med .NET-API, TanStack Start / Next.js / SvelteKit-klient, valgfri Redis-cache og reproduserbare miljøer lokalt og i CI.',
+						'Et eksempel for prosjekter der API, database, frontend, cache, lokalmiljø og deploy-prosess bør fungere sammen fra start.',
 					stack: [
 						'ASP.NET Core',
 						'TanStack Start / Next.js / SvelteKit',
@@ -95,12 +98,12 @@ export const norwegianTranslations: Itranslations = {
 					],
 					delivery: 'extended',
 					highlights: [
-						'Compose-topologi for API, web, database og cache med fornuftige standarder',
-						'Oppsplitting av miljøvariabler og hemmeligheter for dev/stage/prod',
-						'CI-vennlige bygg og vei videre til valgt plattform'
+						'ASP.NET Core-API koblet med React-, Next.js-, TanStack- eller SvelteKit-frontend',
+						'Docker Compose-oppsett for API, web, database og valgfri Redis',
+						'Tydelig miljøhåndtering og byggeløp som kan tas videre mot CI/CD'
 					],
-					notFit: 'Kun statisk side eller minimal API uten containere? Et lavere nivå gir lavere kost og kompleksitet.',
-					body: 'Her passer det for produkter med flere deler som må spille sammen: kontrakt mellom frontend og API, cache-strategi med Redis, og operasjonell tydelighet fra start.'
+					notFit: 'Passer best når flere bevegelige deler må designes sammen. Hvis første steg bare er en landingsside eller et lite API, kan jeg holde omfanget mindre.',
+					body: 'Denne typen arbeid passer for tidlige produkter og interne systemer som trenger både brukerflate og backend-struktur, med nok operasjonelt oppsett til at utviklingen holder seg forutsigbar.'
 				}
 			]
 		}
@@ -136,8 +139,8 @@ export const norwegianTranslations: Itranslations = {
 	},
 	footer: {
 		tagline: 'Bygger gjennomtenkt programvare.',
-		org: 'Haglund Software ENK',
-		rights: `© ${new Date().getFullYear()} Haglund Software ENK. Alle rettigheter forbeholdt.`
+		org: 'Vegard Haglund',
+		rights: 'Uavhengig programvareutvikling fra Norge.'
 	}
 };
 

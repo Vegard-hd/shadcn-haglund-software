@@ -10,8 +10,10 @@
 
 	let mobileOpen = $state(false);
 
+	const homeHref = $derived(withLocale(locale, '/'));
+
 	const links = $derived([
-		{ href: withLocale(locale, '/'), label: nav.home },
+		{ href: homeHref, label: nav.home },
 		{ href: withLocale(locale, '/projects'), label: nav.projects },
 		{ href: withLocale(locale, '/contact'), label: nav.contact }
 	]);

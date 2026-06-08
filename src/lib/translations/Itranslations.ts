@@ -18,6 +18,7 @@ export interface Itranslations {
 			headline: string;
 			tagline: string;
 			cta: string;
+			servicesBelow: string;
 		};
 		about: {
 			sectionTitle: string;
@@ -30,6 +31,8 @@ export interface Itranslations {
 			sectionIntro: string;
 			/** Shown after service cards: examples are illustrative, not fixed quotes. */
 			disclaimer: string;
+			contactHook: string;
+			contactCta: string;
 			deliveryLabels: Record<ServiceDelivery, string>;
 			items: {
 				icon: ServiceIconKey;

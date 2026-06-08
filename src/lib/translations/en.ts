@@ -16,7 +16,8 @@ export const englishTranslations: Itranslations = {
 			headline: '[Your name or tagline here]',
 			tagline:
 				'[A short description of what you do — e.g. "Independent software developer based in Norway"]',
-			cta: 'View Projects'
+			cta: 'View Projects',
+			servicesBelow: 'See my services below'
 		},
 		about: {
 			sectionTitle: 'About Me',
@@ -27,65 +28,67 @@ export const englishTranslations: Itranslations = {
 		services: {
 			sectionTitle: 'Services',
 			sectionIntro:
-				'From static marketing sites to full-stack products and .NET APIs — pick the shape that matches your timeline and stack. Based in Norway; remote-friendly.',
+				'Examples of how I can help as a backend and full-stack developer. These are not fixed packages — I scope the right mix of API, database, frontend, hosting, and delivery process around your project.',
 			disclaimer:
-				'The example setups above are for illustration and marketing only — not fixed offerings or commitments. Get in touch for accurate scope, pricing, and delivery timelines tailored to your project.',
+				'These examples are starting points for scoping, not fixed packages or guarantees. The final approach, price, and timeline depend on the product, integrations, existing codebase, and delivery expectations.',
+			contactHook: 'Want to talk through scope, timeline, or stack for your project?',
+			contactCta: 'Get in Touch',
 			deliveryLabels: {
-				fast: 'Fast delivery',
-				medium: 'Medium delivery',
-				extended: 'Extended delivery'
+				fast: 'Smaller scope',
+				medium: 'Product build',
+				extended: 'Larger system'
 			},
 			items: [
 				{
 					icon: 'layout',
-					title: 'Static SvelteKit sites with custom UI',
+					title: 'SvelteKit sites and lightweight apps',
 					summary:
-						'Fast, polished frontends with a design system — ideal when you need a site or lightweight app without a heavy backend.',
+						'Polished frontends for marketing sites, landing pages, dashboards, and lightweight apps where a heavy backend is not needed.',
 					stack: ['SvelteKit', 'TypeScript', 'shadcn-svelte', 'Tailwind CSS', 'Static hosting'],
 					delivery: 'fast',
 					highlights: [
-						'Marketing sites, landing pages, and content-led experiences',
-						'Accessible, responsive layouts with a cohesive component library',
-						'Performance-focused static builds you can host almost anywhere'
+						'Responsive pages and app shells with a clear visual system',
+						'Accessible UI built with SvelteKit, Tailwind, and shadcn-style components',
+						'Static or low-maintenance deployment when server complexity is not required'
 					],
-					notFit: 'Not the first choice for heavy auth, real-time collaboration, or complex server-side workflows — those usually move up a tier.',
-					body: 'You get a tailored UI (including shadcn-style patterns where it fits), sensible routing, and a deployment story that keeps operations simple.'
+					notFit: 'Best when the main value is presentation, usability, and speed. If the product needs complex data flows, auth, or integrations, I can scope a fuller app instead.',
+					body: 'This can be a good fit for a first public site, a focused product surface, or an internal tool that benefits from strong frontend execution without extra backend overhead.'
 				},
 				{
 					icon: 'layers',
-					title: 'Full-stack TanStack Start or Next.js',
+					title: 'Frontend apps with React, Next.js, TanStack, or SvelteKit',
 					summary:
-						'CRUD-heavy apps, dashboards, and SEO-friendly products with server data, APIs, and a modern React ecosystem.',
+						'Application frontends for products, dashboards, and internal tools that need forms, data loading, auth-friendly flows, and API integration.',
 					stack: ['TanStack Start or Next.js', 'TypeScript', 'React', 'Server components / loaders', 'Your host of choice'],
 					delivery: 'medium',
 					highlights: [
-						'End-user and internal tools with forms, tables, and auth-friendly patterns',
-						'Clear data-loading and routing models (App Router or TanStack conventions)',
-						'Deployable to Node, serverless, or hybrid targets — agreed up front'
+						'React, Next.js, TanStack Start, or SvelteKit depending on project needs',
+						'Forms, tables, dashboards, and user flows connected to real APIs',
+						'Data-loading and routing patterns chosen for maintainability and hosting fit'
 					],
-					notFit: 'If you need a long-lived .NET estate or enterprise integration-first APIs, consider the ASP.NET Core options below.',
-					body: 'Engagements include API integration, sensible state management, and production build pipelines. Hosting model (Node vs serverless) is scoped early so estimates stay honest.'
+					notFit: 'Best when the frontend is the product surface and the backend already exists, is simple, or can be scoped separately. If the API and database are the core work, I can lead that too.',
+					body: 'I can help turn product requirements into usable frontend flows, integrate backend services, and set up the build and deployment path so the app is ready to evolve.'
 				},
 				{
 					icon: 'server',
-					title: 'ASP.NET Core API with database integration',
+					title: 'ASP.NET Core APIs with SQL integration',
 					summary:
-						'Robust REST (or minimal) APIs with persistence, migrations, and documentation — great when .NET is already part of your stack.',
+						'Backend APIs with database design, persistence, migrations, validation, and OpenAPI documentation for products that need a reliable server-side foundation.',
 					stack: ['ASP.NET Core', 'C#', 'EF Core or Dapper', 'PostgreSQL / SQL Server', 'OpenAPI'],
 					delivery: 'medium',
 					highlights: [
-						'Domain-driven endpoints, validation, and versioning where needed',
-						'Migrations, seeding strategies, and environment-aware configuration',
-						'Optional pairing with the SvelteKit or React frontends above'
+						'REST or minimal APIs with clear endpoint and validation boundaries',
+						'SQL integration using PostgreSQL or SQL Server with EF Core or Dapper',
+						'Migrations, OpenAPI docs, and environment-aware configuration'
 					],
-					notFit: 'Not a fit if you only need a brochure site with no backend — the static SvelteKit tier is usually enough.',
-					body: 'Delivery focuses on maintainable APIs you can extend: clear boundaries, tests where they add value, and handover docs for your team.'
+					notFit: 'Best when backend correctness, data modeling, and integration reliability matter. For a simple brochure site, a lighter frontend-only scope is usually enough.',
+					body: 'This is often the right shape when you need a clean API for a frontend, mobile app, admin tool, or integration point and want the backend to be understandable after handover.'
 				},
 				{
 					icon: 'container',
-					title: 'Full stack: ASP.NET Core API + modern frontend + Docker Compose',
+					title: 'Full-stack product build with API, frontend, and infrastructure',
 					summary:
-						'End-to-end systems with a .NET API, a TanStack Start / Next.js / SvelteKit client, optional Redis caching, and reproducible local and CI environments.',
+						'An example shape for projects where the API, database, frontend, cache, local environment, and deployment process need to work together from the start.',
 					stack: [
 						'ASP.NET Core',
 						'TanStack Start / Next.js / SvelteKit',
@@ -95,12 +98,12 @@ export const englishTranslations: Itranslations = {
 					],
 					delivery: 'extended',
 					highlights: [
-						'Compose topology for API, web, database, and cache with sensible defaults',
-						'Environment and secrets split for dev/stage/prod',
-						'CI-friendly builds and a path to your hosting platform'
+						'ASP.NET Core API paired with a React, Next.js, TanStack, or SvelteKit frontend',
+						'Docker Compose setup for API, web, database, and optional Redis',
+						'Clear environment handling and a build path that can move toward CI/CD'
 					],
-					notFit: 'If you only need a single static site or a tiny API without containers, a smaller tier keeps cost and complexity down.',
-					body: 'This tier is for products that need multiple moving parts to work together: contract between frontend and API, caching strategy when Redis is in play, and operational clarity from day one.'
+					notFit: 'Best when multiple moving parts need to be designed together. If the first step is just a landing page or a small API, I can keep the scope smaller.',
+					body: 'This kind of engagement is useful for early products and internal systems that need both product-facing UI and backend structure, with enough operational setup to keep development predictable.'
 				}
 			]
 		}
@@ -136,8 +139,8 @@ export const englishTranslations: Itranslations = {
 	},
 	footer: {
 		tagline: 'Building thoughtful software.',
-		org: 'Haglund Software ENK',
-		rights: `© ${new Date().getFullYear()} Haglund Software ENK. All rights reserved.`
+		org: 'Vegard Haglund',
+		rights: 'Independent software development from Norway.'
 	}
 };
 
