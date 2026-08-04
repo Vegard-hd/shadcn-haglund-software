@@ -1,9 +1,11 @@
 <script lang="ts">
-	import { content } from '$lib/content';
 	import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '$lib/components/ui/card';
-	import { Badge } from '$lib/components/ui/badge';
+	import StackBadge from '$lib/icons/StackBadge.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import { ExternalLink } from '@lucide/svelte';
+
+	let { data } = $props();
+	const content = $derived(data.content);
 </script>
 
 <section class="mx-auto w-full max-w-5xl px-6 py-20">
@@ -30,7 +32,7 @@
 					</CardHeader>
 					<CardContent class="flex flex-1 flex-wrap gap-2">
 						{#each project.tags as tag}
-							<Badge variant="secondary" class="text-xs">{tag}</Badge>
+							<StackBadge label={tag} variant="secondary" class="text-xs" />
 						{/each}
 					</CardContent>
 					{#if project.url}

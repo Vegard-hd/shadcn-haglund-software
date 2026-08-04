@@ -1,18 +1,20 @@
 <script lang="ts">
-	import { content } from '$lib/content';
 	import { Button } from '$lib/components/ui/button';
 	import { Card, CardContent } from '$lib/components/ui/card';
-	import { Mail, MapPin, Link } from '@lucide/svelte';
+	import type { SiteContent } from '$lib/content';
+	import { Link, Mail, MapPin } from '@lucide/svelte';
+
+	let { contact }: { contact: SiteContent['contact'] } = $props();
 </script>
 
-<section class="flex min-h-[calc(100vh-8rem)] flex-col items-center justify-center px-6 py-20">
-	<div class="w-full max-w-lg space-y-8 text-center">
+<section id="contact" class="mx-auto w-full max-w-5xl px-6 py-20">
+	<div class="mx-auto w-full max-w-lg space-y-8 text-center">
 		<div class="space-y-3">
-			<h1 class="font-heading text-foreground text-4xl font-bold tracking-tight">
-				{content.contact.sectionTitle}
-			</h1>
+			<h2 class="font-heading text-foreground text-3xl font-bold tracking-tight">
+				{contact.sectionTitle}
+			</h2>
 			<p class="text-muted-foreground text-lg">
-				{content.contact.subtitle}
+				{contact.subtitle}
 			</p>
 		</div>
 
@@ -23,8 +25,8 @@
 						<Mail size={16} />
 					</div>
 					<div>
-						<p class="text-muted-foreground text-xs uppercase tracking-wider">{content.contact.emailLabel}</p>
-						<p class="text-foreground text-sm font-medium">{content.contact.email}</p>
+						<p class="text-muted-foreground text-xs uppercase tracking-wider">{contact.emailLabel}</p>
+						<p class="text-foreground text-sm font-medium">{contact.email}</p>
 					</div>
 				</div>
 
@@ -33,20 +35,20 @@
 						<MapPin size={16} />
 					</div>
 					<div>
-						<p class="text-muted-foreground text-xs uppercase tracking-wider">{content.contact.locationLabel}</p>
-						<p class="text-foreground text-sm font-medium">{content.contact.location}</p>
+						<p class="text-muted-foreground text-xs uppercase tracking-wider">{contact.locationLabel}</p>
+						<p class="text-foreground text-sm font-medium">{contact.location}</p>
 					</div>
 				</div>
 			</CardContent>
 		</Card>
 
 		<div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
-			<Button href="mailto:{content.contact.email}" size="lg" class="gap-2 font-medium">
+			<Button href="mailto:{contact.email}" size="lg" class="gap-2 font-medium">
 				<Mail size={16} />
-				{content.contact.ctaEmail}
+				{contact.ctaEmail}
 			</Button>
 			<Button
-				href={content.contact.linkedInUrl}
+				href={contact.linkedInUrl}
 				variant="outline"
 				size="lg"
 				class="gap-2 font-medium"
@@ -54,7 +56,7 @@
 				rel="noopener noreferrer"
 			>
 				<Link size={16} />
-				{content.contact.ctaLinkedIn}
+				{contact.ctaLinkedIn}
 			</Button>
 		</div>
 	</div>

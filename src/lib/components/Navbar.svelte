@@ -1,29 +1,36 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { withLocale } from '$lib/i18n/paths';
 	import { Button } from '$lib/components/ui/button';
 	import { Menu, X } from '@lucide/svelte';
 	import type { SiteContent } from '$lib/content';
+	import type { TranslationLocale } from '$lib/translations';
 
-	let { nav }: { nav: SiteContent['nav'] } = $props();
+	let { nav, locale }: { nav: SiteContent['nav']; locale: TranslationLocale } = $props();
 
 	let mobileOpen = $state(false);
 
+	const homeHref = $derived(withLocale(locale, '/'));
+
 	const links = $derived([
-		{ href: '/', label: nav.home },
-		{ href: '/projects', label: nav.projects },
-		{ href: '/contact', label: nav.contact }
+		{ href: homeHref, label: nav.home },
+		{ href: withLocale(locale, '/projects'), label: nav.projects },
+		{ href: withLocale(locale, '/contact'), label: nav.contact }
 	]);
 
 	function isActive(href: string) {
-		if (href === '/') return page.url.pathname === '/';
-		return page.url.pathname.startsWith(href);
+		const path = page.url.pathname;
+		if (path === href) return true;
+		// Norwegian home is `/no` — must not match every `/no/...` route.
+		if (href === '/no') return false;
+		return href !== '/' && path.startsWith(`${href}/`);
 	}
 </script>
 
 <header class="border-border/60 bg-background/95 supports-[backdrop-filter]:bg-background/80 sticky top-0 z-50 w-full border-b backdrop-blur">
 	<div class="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
 		<a
-			href="/"
+			href={withLocale(locale, '/')}
 			class="text-foreground font-heading text-lg font-semibold tracking-tight transition-opacity hover:opacity-80"
 		>
 			{nav.brand}
